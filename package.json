@@ -16,12 +16,6 @@
     "@mui/icons-material": "^6.4.2",
     "@mui/lab": "^6.0.0-beta.25",
     "@mui/material": "^6.4.2",
-<<<<<<< HEAD
-    "aos": "^2.3.4",
-=======
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
->>>>>>> 0090a4e3a84613a747894644a69a68b8f4970d23
     "lucide-react": "^0.344.0",
     "path": "^0.12.7",
     "react": "^18.3.1",
