@@ -1,23 +1,51 @@
 import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// The App component represents the main structure of the app.
-const App: React.FC = () => {
+// Importing Components
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HeroSection from './components/HeroSection';
+import Timeline from './components/Timeline'; // Assuming Timeline is a component
+
+const Layout: React.FC = ({ children }: { children: React.ReactNode }) => {
   return (
-    // Container div for full-page layout
     <div className="min-h-screen bg-gradient-to-b from-purple-900 via-purple-800 to-indigo-900 flex flex-col">
-      {/* Header Section */}
+      {/* Header that is always visible */}
       <Header />
       
-      {/* Hero Section */}
-      <HeroSection />
+      {/* Main Content that changes based on the route */}
+      <main>{children}</main>
       
-      {/* Footer Section */}
+      {/* Footer that is always visible */}
       <Footer />
     </div>
   );
-}
+};
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      {/* Define Routes */}
+      <Routes>
+        {/* Home route (renders both HeroSection and Timeline) */}
+        <Route 
+          path="/" 
+          element={
+            <Layout>
+              <HeroSection />
+              <Timeline /> {/* Add Timeline here on the home page */}
+            </Layout>
+          } 
+        />
+        
+        {/* Timeline route */}
+        <Route 
+          path="/timeline" 
+          element={<Layout><Timeline /></Layout>} 
+        />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
