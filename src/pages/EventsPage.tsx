@@ -39,7 +39,7 @@ const events = [
     //     title: "Cultural",
     // },
 ];
-export default function Events() {
+export default function EventsPage() {
     return events.map((event) => (
         <div key={event.title}>
             <Event

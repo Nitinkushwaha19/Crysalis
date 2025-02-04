@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Timeline from "./components/Timeline"; // Assuming Timeline is a component
-import Events from "./pages/Events";
+import EventsPage from "./pages/EventsPage";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -54,7 +54,7 @@ const App: React.FC = () => {
                     path="/events"
                     element={
                         <Layout>
-                            <Events />
+                            <EventsPage />
                         </Layout>
                     }
                 />
