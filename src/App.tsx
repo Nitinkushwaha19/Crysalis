@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Timeline from "./components/Timeline"; // Assuming Timeline is a component
 import EventsPage from "./pages/EventsPage";
+import InvitationCard from "./components/InvitationCard";
+import { ReduxProvider } from "./hooks/isPhone";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -32,11 +34,14 @@ const App: React.FC = () => {
                 <Route
                     path="/"
                     element={
-                        <Layout>
-                            <HeroSection />
-                            <Timeline />{" "}
-                            {/* Add Timeline here on the home page */}
-                        </Layout>
+                        <ReduxProvider>
+                            <Layout>
+                                <HeroSection />
+                                <InvitationCard />
+                                <Timeline />{" "}
+                                {/* Add Timeline here on the home page */}
+                            </Layout>
+                        </ReduxProvider>
                     }
                 />
 
