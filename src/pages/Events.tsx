@@ -13,6 +13,7 @@ const events = [
             "/assets/event7.jpg",
             "/assets/event8.jpg",
         ],
+        vertical: false,
     },
     {
         title: "Sports",
@@ -26,6 +27,7 @@ const events = [
             "/assets/event7.jpg",
             "/assets/event8.jpg",
         ],
+        vertical: true,
     },
     // {
     //     title: "Sports",
@@ -44,6 +46,7 @@ export default function Events() {
                 key={event.title}
                 title={event.title}
                 images={event.images}
+                vertical={event.vertical}
             />
         </div>
     ));
