@@ -8,7 +8,7 @@ const Header: React.FC = () => {
     <nav className="bg-black/20 backdrop-blur-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 text-white font-bold text-xl">CULTURAMA '24</div>
+          <div className="flex-shrink-0 text-white font-bold text-xl">CHRYSALIS '25</div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">

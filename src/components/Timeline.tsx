@@ -13,6 +13,7 @@ export default function OppositeContentTimeline() {
 
   return (
     <Timeline position="alternate" sx={{ margin: '10rem' }}>
+      {/* First Timeline Item */}
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           09:30 am
@@ -22,48 +23,51 @@ export default function OppositeContentTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Card
-            sx={{
-              display: 'flex',
-              width: '100%',
-              height: isSmallScreen ? 'auto' : '300px',
-              flexDirection: isSmallScreen ? 'column' : 'row',
-              borderRadius: '8px',
-              boxShadow: 3
-            }}
-          >
-            <CardMedia
-              component="img"
-              sx={{
-                width: isSmallScreen ? '100%' : '50%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-              alt="Eat"
-            />
-            <CardContent
+          <div data-aos="fade-right">
+            <Card
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',  // Vertically center the content
-                alignItems: 'center',  // Horizontally center the content
-                textAlign: 'center', // Center the text inside the content
-                padding: '10px',
-                height: '100%' // Ensure it takes full height of the card
+                width: '100%',
+                height: isSmallScreen ? 'auto' : '300px',
+                flexDirection: isSmallScreen ? 'column' : 'row',
+                borderRadius: '8px',
+                boxShadow: 3
               }}
             >
-              <Typography variant="h6" component="div">
-                Eat
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                It's time to have a healthy meal and refuel.
-              </Typography>
-            </CardContent>
-          </Card>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: isSmallScreen ? '100%' : '50%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+                image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+                alt="Eat"
+              />
+              <CardContent
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  padding: '10px',
+                  height: '100%'
+                }}
+              >
+                <Typography variant="h6" component="div">
+                  Eat
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  It's time to have a healthy meal and refuel.
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
         </TimelineContent>
       </TimelineItem>
 
+      {/* Second Timeline Item */}
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           10:00 am
@@ -73,48 +77,51 @@ export default function OppositeContentTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Card
-            sx={{
-              display: 'flex',
-              width: '100%',
-              height: isSmallScreen ? 'auto' : '300px',
-              flexDirection: isSmallScreen ? 'column' : 'row',
-              borderRadius: '8px',
-              boxShadow: 3
-            }}
-          >
-            <CardMedia
-              component="img"
-              sx={{
-                width: isSmallScreen ? '100%' : '50%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-              alt="Code"
-            />
-            <CardContent
+          <div data-aos="fade-left">
+            <Card
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',  // Vertically center the content
-                alignItems: 'center',  // Horizontally center the content
-                textAlign: 'center', // Center the text inside the content
-                padding: '10px',
-                height: '100%' // Ensure it takes full height of the card
+                width: '100%',
+                height: isSmallScreen ? 'auto' : '300px',
+                flexDirection: isSmallScreen ? 'column' : 'row',
+                borderRadius: '8px',
+                boxShadow: 3
               }}
             >
-              <Typography variant="h6" component="div">
-                Code
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Time to dive into some coding and work on projects.
-              </Typography>
-            </CardContent>
-          </Card>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: isSmallScreen ? '100%' : '50%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+                image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+                alt="Code"
+              />
+              <CardContent
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  padding: '10px',
+                  height: '100%'
+                }}
+              >
+                <Typography variant="h6" component="div">
+                  Code
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Time to dive into some coding and work on projects.
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
         </TimelineContent>
       </TimelineItem>
 
+      {/* Third Timeline Item */}
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           12:00 am
@@ -124,48 +131,51 @@ export default function OppositeContentTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Card
-            sx={{
-              display: 'flex',
-              width: '100%',
-              height: isSmallScreen ? 'auto' : '300px',
-              flexDirection: isSmallScreen ? 'column' : 'row',
-              borderRadius: '8px',
-              boxShadow: 3
-            }}
-          >
-            <CardMedia
-              component="img"
-              sx={{
-                width: isSmallScreen ? '100%' : '50%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-              alt="Sleep"
-            />
-            <CardContent
+          <div data-aos="fade-right">
+            <Card
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',  // Vertically center the content
-                alignItems: 'center',  // Horizontally center the content
-                textAlign: 'center', // Center the text inside the content
-                padding: '10px',
-                height: '100%' // Ensure it takes full height of the card
+                width: '100%',
+                height: isSmallScreen ? 'auto' : '300px',
+                flexDirection: isSmallScreen ? 'column' : 'row',
+                borderRadius: '8px',
+                boxShadow: 3
               }}
             >
-              <Typography variant="h6" component="div">
-                Sleep
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Rest is important for a healthy mind and body.
-              </Typography>
-            </CardContent>
-          </Card>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: isSmallScreen ? '100%' : '50%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+                image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+                alt="Sleep"
+              />
+              <CardContent
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  padding: '10px',
+                  height: '100%'
+                }}
+              >
+                <Typography variant="h6" component="div">
+                  Sleep
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Rest is important for a healthy mind and body.
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
         </TimelineContent>
       </TimelineItem>
 
+      {/* Fourth Timeline Item */}
       <TimelineItem>
         <TimelineOppositeContent color="text.secondary">
           9:00 am
@@ -175,45 +185,47 @@ export default function OppositeContentTimeline() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Card
-            sx={{
-              display: 'flex',
-              width: '100%',
-              height: isSmallScreen ? 'auto' : '300px',
-              flexDirection: isSmallScreen ? 'column' : 'row',
-              borderRadius: '8px',
-              boxShadow: 3
-            }}
-          >
-            <CardMedia
-              component="img"
-              sx={{
-                width: isSmallScreen ? '100%' : '50%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-              image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-              alt="Repeat"
-            />
-            <CardContent
+          <div data-aos="fade-left">
+            <Card
               sx={{
                 display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',  // Vertically center the content
-                alignItems: 'center',  // Horizontally center the content
-                textAlign: 'center', // Center the text inside the content
-                padding: '10px',
-                height: '100%' // Ensure it takes full height of the card
+                width: '100%',
+                height: isSmallScreen ? 'auto' : '300px',
+                flexDirection: isSmallScreen ? 'column' : 'row',
+                borderRadius: '8px',
+                boxShadow: 3
               }}
             >
-              <Typography variant="h6" component="div">
-                Repeat
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Time to repeat the cycle and stay productive!
-              </Typography>
-            </CardContent>
-          </Card>
+              <CardMedia
+                component="img"
+                sx={{
+                  width: isSmallScreen ? '100%' : '50%',
+                  height: '100%',
+                  objectFit: 'cover',
+                }}
+                image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+                alt="Repeat"
+              />
+              <CardContent
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  padding: '10px',
+                  height: '100%'
+                }}
+              >
+                <Typography variant="h6" component="div">
+                  Repeat
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Time to repeat the cycle and stay productive!
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
         </TimelineContent>
       </TimelineItem>
     </Timeline>
