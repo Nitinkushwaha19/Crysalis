@@ -1,4 +1,5 @@
 import Event from "@/components/Event";
+import Event3D from "@/components/Event3D";
 
 const events = [
     {
@@ -29,25 +30,47 @@ const events = [
         ],
         vertical: true,
     },
-    // {
-    //     title: "Sports",
-    // },
-    // {
-    //     title: "Traditional",
-    // },
-    // {
-    //     title: "Cultural",
-    // },
+];
+const events3d = [
+    {
+        name: "Microsoft",
+        img: "/assets/event1.jpeg",
+    },
+    {
+        name: "Apple",
+        img: "/assets/event2.jpeg",
+    },
+    {
+        name: "Google",
+        img: "/assets/event3.jpeg",
+    },
+    {
+        name: "Facebook",
+        img: "/assets/event4.jpg",
+    },
+    {
+        name: "LinkedIn",
+        img: "/assets/event5.jpg",
+    },
+    {
+        name: "Twitter",
+        img: "/assets/event6.jpg",
+    },
 ];
 export default function EventsPage() {
-    return events.map((event) => (
-        <div key={event.title}>
-            <Event
-                key={event.title}
-                title={event.title}
-                images={event.images}
-                vertical={event.vertical}
-            />
-        </div>
-    ));
+    return (
+        <>
+            {events.map((event) => (
+                <div key={event.title}>
+                    <Event
+                        key={event.title}
+                        title={event.title}
+                        images={event.images}
+                        vertical={event.vertical}
+                    />
+                </div>
+            ))}
+            <Event3D logos={events3d} />
+        </>
+    );
 }
