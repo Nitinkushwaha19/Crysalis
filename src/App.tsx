@@ -10,7 +10,7 @@ import { Events } from "./pages/Events";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div className="min-h-screen bg-gradient-to-b from-purple-900 via-purple-800 to-indigo-900 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-b  flex flex-col">
             {/* Header that is always visible */}
             <Header />
 
