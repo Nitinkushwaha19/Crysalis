@@ -7,11 +7,15 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { Card, CardMedia, CardContent, Typography, useMediaQuery, Box } from '@mui/material';
+import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
 
 export default function OppositeContentTimeline() {
   const isSmallScreen = useMediaQuery('(max-width:600px)');  // Check if the screen width is small
   
+  React.useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with the desired duration
+  }, []);
   
   return (
     <Timeline position="alternate" sx={{ margin: '10rem' }}>
