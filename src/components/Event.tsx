@@ -1,41 +1,5 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
-import { useEffect } from "react";
-
-const reviews = [
-    {
-        id: 1,
-        img: "/assets/event1.jpeg",
-    },
-    {
-        id: 2,
-        img: "/assets/event2.jpeg",
-    },
-    {
-        id: 3,
-        img: "/assets/event3.jpeg",
-    },
-    {
-        id: 4,
-        img: "/assets/event4.jpg",
-    },
-    {
-        id: 5,
-        img: "/assets/event5.jpg",
-    },
-    {
-        id: 6,
-        img: "/assets/event6.jpg",
-    },
-    {
-        id: 7,
-        img: "/assets/event7.jpg",
-    },
-    {
-        id: 8,
-        img: "/assets/event8.jpg",
-    },
-];
 
 type EventProps = {
     title: string;
