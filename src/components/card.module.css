@@ -7,7 +7,7 @@
     position: relative;
     width: 380px;
     height: 248px;
-    background: #2f4230;
+    background: white;
     border-radius: 6px;
     z-index: 0;
 }
@@ -24,7 +24,7 @@
 
 .top {
     position: absolute;
-    border-top: 185px solid #2f4230;
+    border-top: 185px solid white;
     border-right: 191px solid transparent;
     border-left: 191px solid transparent;
     height: 0;
@@ -36,7 +36,7 @@
 
 .letter {
     position: absolute;
-    background-color: aqua;
+    background-color: white;
     height: 200px;
     width: 250px;
     top: 18px;
@@ -66,6 +66,7 @@
     z-index: 2;
     transform: rotateY(180deg);
 }
+
 .card_back {
     z-index: 3;
     /* transform: rotateY(180deg); */
