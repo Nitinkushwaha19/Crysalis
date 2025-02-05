@@ -1,0 +1,62 @@
+import React from 'react';
+import ProfileCard from '../components/MembersCard'; // Assuming you have ProfileCard component in the same directory
+
+// Sample data for the team members
+const members = [
+    { name: 'John Doe', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Jane Smith', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Sam Wilson', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Chris Evans', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Mark Ruffalo', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Scarlett Johansson', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Robert Downey Jr.', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Tom Hiddleston', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Tom Holland', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+];
+
+const Members = () => {
+    return (
+        <div className="p-6 mt-[5rem]">
+            {/* "Our Leads" section with 2 cards per row */}
+            <div className="mb-10">
+                <h2 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-pink-500 to-purple-500">
+                    Our Leads
+                </h2>
+                <div className="flex flex-wrap justify-center gap-4 pl-6 pr-6">
+                    {members
+                        .filter(member => member.designation === 'Our Lead')
+                        .map((member, idx) => (
+                            <div key={idx} className="flex justify-center w-full sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 mb-8">
+                                <ProfileCard
+                                    name={member.name}
+                                    designation={member.designation}
+                                    imageUrl={member.imageUrl}
+                                />
+                            </div>
+                        ))}
+                </div>
+            </div>
+
+
+
+            {/* Other members (responsive grid) */}
+            <div className="mb-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 sm:gap-6 md:gap-8 justify-center">
+                    {members
+                        .filter(member => member.designation !== 'Our Lead')
+                        .map((member, idx) => (
+                            <div key={idx} className="flex justify-center mb-6 sm:mb-8 md:mb-10">
+                                <ProfileCard
+                                    name={member.name}
+                                    designation={member.designation}
+                                    imageUrl={member.imageUrl}
+                                />
+                            </div>
+                        ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Members;
