@@ -31,7 +31,7 @@ export default function Event({ title, images, vertical }: EventProps) {
     return (
         <div
             className={`relative flex flex-col h-[800px] w-11/12 mx-auto ${
-                vertical ? "md:flex-row" : "md:flex-col"
+                vertical ? "my-32 md:flex-row" : "md:flex-col"
             } items-center justify-center bg-gray-950 overflow-hidden rounded-lg md:shadow-xl`}
         >
             <h1

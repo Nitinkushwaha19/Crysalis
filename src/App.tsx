@@ -7,7 +7,9 @@ import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Timeline from "./components/Timeline"; // Assuming Timeline is a component
 import EventsPage from "./pages/EventsPage";
-import Members from './pages/Members'
+import InvitationCard from "./components/InvitationCard";
+import { ReduxProvider } from "./hooks/isPhone";
+import Members from "./pages/Members";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -25,21 +27,24 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 };
 
 const App: React.FC = () => {
-  return (
-    <Router>
-      {/* Define Routes */}
-      <Routes>
-        {/* Home route (renders both HeroSection and Timeline) */}
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <HeroSection />
-              <Timeline />{" "}
-              {/* Add Timeline here on the home page */}
-            </Layout>
-          }
-        />
+    return (
+        <Router>
+            {/* Define Routes */}
+            <Routes>
+                {/* Home route (renders both HeroSection and Timeline) */}
+                <Route
+                    path="/"
+                    element={
+                        <ReduxProvider>
+                            <Layout>
+                                <HeroSection />
+                                <InvitationCard />
+                                <Timeline />{" "}
+                                {/* Add Timeline here on the home page */}
+                            </Layout>
+                        </ReduxProvider>
+                    }
+                />
 
         {/* Timeline route */}
         <Route

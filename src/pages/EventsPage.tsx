@@ -61,7 +61,7 @@ export default function EventsPage() {
     return (
         <>
             {events.map((event) => (
-                <div key={event.title}>
+                <div className="min-h-screen" key={event.title}>
                     <Event
                         key={event.title}
                         title={event.title}
@@ -70,7 +70,15 @@ export default function EventsPage() {
                     />
                 </div>
             ))}
-            <Event3D logos={events3d} />
+            <div className="flex items-center w-11/12">
+                <Event3D logos={events3d} />
+                <h1
+                    className="ml-44 mr-10 text-6xl text-white"
+                    style={{ fontFamily: "Bodoni Moda" }}
+                >
+                    Cultural
+                </h1>
+            </div>
         </>
     );
 }
