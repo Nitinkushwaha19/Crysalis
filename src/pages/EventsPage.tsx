@@ -73,7 +73,7 @@ export default function EventsPage() {
             <div className="flex flex-col-reverse justify-center items-center md:flex-row">
                 <Event3D logos={events3d} />
                 <h1
-                    className="text-4xl mb-5 text-white md:text-6xl lg:mr-36"
+                    className="text-4xl mb-5 text-white md:text-6xl ml-10 lg:mr-36"
                     style={{ fontFamily: "Bodoni Moda" }}
                 >
                     CULTURAL
