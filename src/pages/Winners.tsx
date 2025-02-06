@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+import { BorderBeam } from '@/components/ui/border-beam';
 
 const Winners = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500, // Duration of the animation
+    });
+  }, []);
+
   return (
-    <div className="text-center p-5 mt-24">
+    <div className="text-center p-5 mt-24" style={{ fontFamily: "Bodoni Moda" }} >
       {/* WINNERS Heading with Gradient */}
       <h1 className="text-6xl font-bold bg-clip-text text-transparent text-white mb-32">
         WINNERS
@@ -16,46 +25,51 @@ const Winners = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-5">
             <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+              src="https://res.cloudinary.com/dcpugzrqm/image/upload/v1738837451/tugofwar_2_rittnc.jpg"
               alt="Tug of War"
-              className="w-full md:w-72 lg:w-[40rem] h-auto object-cover mt-2 rounded-md"
+              className="w-full md:w-72 lg:w-[40rem] h-[35rem]  object-cover mt-2 rounded-md"
+              data-aos="fade-up" // Add fade-up effect
             />
             <img
-              src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
+              src="https://res.cloudinary.com/dcpugzrqm/image/upload/v1738837876/tugofwar_qp5zvg.jpg"
               alt="Tug of War"
               className="w-full md:w-72 lg:w-[40rem] h-auto object-cover mt-2 rounded-md"
+              data-aos="fade-up" // Add fade-up effect
+              data-aos-delay="200" // Optional: Add delay for staggered animation
             />
           </div>
         </div>
       </div>
 
-      {/* BGMI */}
-      <div className="my-5 flex flex-wrap justify-center items-center">
+      {/* Volleyball */}
+      <div className="my-5 flex flex-wrap justify-center items-center]">
+        <div className="m-2 flex flex-col items-center">
+          <h2 className="text-4xl font-bold bg-clip-text text-transparent text-white mt-20 mb-10" style={{ fontFamily: "Bodoni Moda" }} >
+            Volleyball
+          </h2>
+          <img
+            src="https://res.cloudinary.com/dcpugzrqm/image/upload/v1738838398/volleball_ttk4bb.jpg"
+            alt="BGMI"
+            className="w-full md:w-72 lg:w-[40rem] h-[30rem] object-cover mt-2 rounded-md"
+            data-aos="fade-up" // Add fade-up effect
+          />
+        </div>
+      </div>
+
+      {/* Volleyball */}
+      {/* <div className="my-5 flex flex-wrap justify-center items-center">
         <div className="m-2 flex flex-col items-center">
           <h2 className="text-4xl font-bold bg-clip-text text-transparent text-white mt-20 mb-10">
             BGMI
           </h2>
           <img
             src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-            alt="BGMI"
+            alt="Volleyball"
             className="w-full md:w-72 lg:w-[40rem] h-auto object-cover mt-2 rounded-md"
+            data-aos="fade-up" // Add fade-up effect
           />
         </div>
-      </div>
-
-      {/* Dog and Bone */}
-      <div className="my-5 flex flex-wrap justify-center items-center">
-        <div className="m-2 flex flex-col items-center">
-          <h2 className="text-4xl font-bold bg-clip-text text-transparent text-white mt-20 mb-10">
-            Volleyball
-          </h2>
-          <img
-            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"
-            alt="Dog and Bone"
-            className="w-full md:w-72 lg:w-[40rem] h-auto object-cover mt-2 rounded-md"
-          />
-        </div>
-      </div>
+      </div> */}
     </div>
   );
 };
