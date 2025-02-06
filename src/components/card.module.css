@@ -24,7 +24,7 @@
 
 .top {
     position: absolute;
-    border-top: 185px solid white;
+    border-top: 185px solid oklch(0.446 0.043 257.281);
     border-right: 191px solid transparent;
     border-left: 191px solid transparent;
     height: 0;

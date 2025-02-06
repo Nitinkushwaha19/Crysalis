@@ -13,22 +13,11 @@ const experiences = [
         type: "work",
     },
     {
-      title: "TRADITIONAL DAY",
-      location: "Ramdeobaba University",
-      period: "2024-26",
-      description: ["Our traditions are the stories of our ancestors."],
-      type: "work",
-    },
-    {
-      title: "INAUGRAL DAY",
-      location: "Meritest Solution Pvt. Ltd",
-      period: "June 2023 - September 2023",
-      description: [
-        "Build reusable components using Vue.js.",
-        "Integrated front-end components with Laravel functionalities.",
-        "Collaborated with cross-functional teams to deliver high-quality solutions.",
-      ],
-      type: "work",
+        title: "TRADITIONAL DAY",
+        location: "Ramdeobaba University",
+        period: "2024-26",
+        description: ["Our traditions are the stories of our ancestors."],
+        type: "work",
     },
     {
         title: "CULTURAL DAY",

@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    useLocation,
+} from "react-router-dom";
 
 // Importing Components
 import Header from "./components/Header";
@@ -13,8 +18,14 @@ import Members from "./pages/Members";
 import Winners from "./pages/Winners";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+    const { pathname } = useLocation();
+    const isHome = pathname === "/";
     return (
-        <div className="min-h-screen bg-black flex flex-col bg-[url(/assets/bg-4.jpg)]">
+        <div
+            className={`min-h-screen bg-black flex flex-col bg-[url(/assets/${
+                isHome ? "globe.png" : "bg-4.jpg"
+            })] bg-cover`}
+        >
             {/* Header that is always visible */}
             <Header />
 

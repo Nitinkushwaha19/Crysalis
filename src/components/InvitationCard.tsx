@@ -99,7 +99,7 @@ const InvitationCard = () => {
                 ref={envelopeRef}
             >
                 <div className={`${styles.shadow}`}></div>
-                <div className={`bg-slate-900 ${styles.back}`}></div>
+                <div className={`bg-slate-600 ${styles.back}`}></div>
 
                 <div className={`letter ${styles.letter}`} ref={letterRef}>
                     {/* Backside of the letter */}
@@ -142,7 +142,7 @@ const InvitationCard = () => {
                                 fillRule="evenodd"
                                 clipRule="evenodd"
                                 d="M2.21848 1.34141C0.864867 2.44152 0 4.11976 0 5.99999V242C0 245.314 2.68628 248 5.99999 248H357C360.314 248 363 245.314 363 242V6C363 2.68629 360.314 0 357 0H348L278 39L249.5 104H99.5L64.5 39L2.21848 1.34141Z"
-                                fill="grey"
+                                fill="rgb(51, 102, 153)"
                             />
                             <path
                                 d="M100 103C45.7231 163.046 30.1436 180.086 29.1385 181.1L2 245"
@@ -161,7 +161,7 @@ const InvitationCard = () => {
                                     width="348"
                                     height="248"
                                     rx="5"
-                                    fill="white"
+                                    fill="rgb(102, 102, 153)"
                                 />
                             </clipPath>
                         </defs>
