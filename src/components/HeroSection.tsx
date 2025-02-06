@@ -1,13 +1,12 @@
 import React from "react";
 import { WarpBackground } from "./ui/warp-background";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { BorderBeam } from "./ui/border-beam";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const HeroSection: React.FC = () => {
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleExploreEvents = () => {
-        navigate('/events'); // Redirect to /events
+        navigate("/events"); // Redirect to /events
     };
 
     return (
@@ -28,7 +27,7 @@ const HeroSection: React.FC = () => {
                         <button
                             className="bg-transparent border bg-purple-600 hover:border-4 hover:font-bold text-white px-8 py-3 rounded-full transition-colors"
                             onClick={handleExploreEvents} // Add onClick handler
-                            >
+                        >
                             Explore Events
                         </button>
                     </div>
