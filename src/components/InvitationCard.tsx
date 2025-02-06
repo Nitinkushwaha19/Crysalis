@@ -104,14 +104,13 @@ const InvitationCard = () => {
                 <div className={`letter ${styles.letter}`} ref={letterRef}>
                     {/* Backside of the letter */}
                     <div
-                        className={`${styles.card_back} card-back absolute w-full h-full transform rotateY-180 backface-hidden z-[2]`}
+                        className={`${styles.card_back} card-back absolute w-full h-full transform rotateY-180 backface-hidden z-[4]`}
                     >
                         <img
                             src="/assets/Invitation.svg"
                             alt="Back of invitation"
                             width={isMobileView ? "300px" : "800px"}
                             height={isMobileView ? "300px" : "800px"}
-                            className="rounded-[16px]"
                         />
                     </div>
 
@@ -120,11 +119,10 @@ const InvitationCard = () => {
                         className={`${styles.card_front} absolute w-full backface-hidden z-[3] bg-black p-2 rounded-xl`}
                     >
                         <img
-                            src="/assets/Invitation.svg"
+                            src="/assets/invitation.jpg"
                             alt="Front of invitation"
                             width={isMobileView ? "300px" : "800px"}
-                            height={isMobileView ? "300px" : "800px"}
-                            className="rounded-[16px]"
+                            height={isMobileView ? "300px" : "900px"}
                         />
                     </div>
                 </div>
@@ -137,12 +135,24 @@ const InvitationCard = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
+                        <defs>
+                            <linearGradient
+                                id="gradient1"
+                                x1="0%"
+                                y1="0%"
+                                x2="100%"
+                                y2="100%"
+                            >
+                                <stop offset="0%" stop-color="#336699" />
+                                <stop offset="100%" stop-color="#66ccff" />
+                            </linearGradient>
+                        </defs>
                         <g clipPath="url(#clip0_2_3)">
                             <path
                                 fillRule="evenodd"
                                 clipRule="evenodd"
                                 d="M2.21848 1.34141C0.864867 2.44152 0 4.11976 0 5.99999V242C0 245.314 2.68628 248 5.99999 248H357C360.314 248 363 245.314 363 242V6C363 2.68629 360.314 0 357 0H348L278 39L249.5 104H99.5L64.5 39L2.21848 1.34141Z"
-                                fill="rgb(51, 102, 153)"
+                                fill="url(#gradient1)"
                             />
                             <path
                                 d="M100 103C45.7231 163.046 30.1436 180.086 29.1385 181.1L2 245"
