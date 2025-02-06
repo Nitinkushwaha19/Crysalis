@@ -6,9 +6,9 @@ import { GraduationCap, Briefcase } from "lucide-react";
 
 const experiences = [
     {
-        title: "MCA",
+        title: "Sports Day",
         location: "Ramdeobaba University",
-        period: "2024-26",
+        period: "3 Feb 25 - 7 Feb 25",
         description: [
             "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
         ],
@@ -80,10 +80,10 @@ const Timeline = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={containerVariants}
-                    className="max-w-7xl mx-auto"
+                    className="max-w-5xl mx-auto"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center">
-                        Professional Journey
+                        Events Journey
                     </h2>
 
                     <div className="relative">
@@ -133,17 +133,25 @@ const Timeline = () => {
                                         }}
                                     >
                                         <img
-                                            src="/assets/event1.jpeg"
-                                            className="w-full h-64 object-cover rounded-t-xl"
+                                            src={`/assets/event-timeline${
+                                                index + 1
+                                            }.jpg`}
+                                            className="w-full h-72 object-cover rounded-t-xl"
                                         />
-                                        <div className="p-8 h-1/2">
-                                            <h3 className="text-2xl font-bold text-primary mb-2">
+                                        <div className="p-5 h-1/3">
+                                            <h3 className="text-2xl font-bold text-primary mb-1">
                                                 {exp.title}
                                             </h3>
                                             <p className="text-sm font-medium text-primary/60 mb-1">
+                                                <span className="font-bold">
+                                                    Venue:{" "}
+                                                </span>
                                                 {exp.location}
                                             </p>
-                                            <p className="text-sm font-medium text-primary/60 mb-4">
+                                            <p className="text-sm font-medium text-primary/60 mb-2">
+                                                <span className="font-bold">
+                                                    Date:{" "}
+                                                </span>
                                                 {exp.period}
                                             </p>
                                             {exp.description.length === 1 ? (
