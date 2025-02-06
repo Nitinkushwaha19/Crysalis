@@ -1,25 +1,10 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { GraduationCap, Briefcase } from "lucide-react";
 
 const experiences = [
-  {
-    title: "MCA",
-    location: "Ramdeobaba University",
-    period: "2024-26",
-    description: [
-      "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
-    ],
-    type: "work",
-  },
-  {
-    title: "MCA",
-    location: "Ramdeobaba University",
-    period: "2024-26",
-    description: [
-      "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
-    ],
-    type: "work",
-  },
   {
     title: "MCA",
     location: "Ramdeobaba University",
@@ -43,6 +28,10 @@ const experiences = [
 ];
 
 const Timeline = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -92,6 +81,7 @@ const Timeline = () => {
                     ? "md:flex-row flex-col"
                     : "md:flex-row-reverse flex-col"
                 }`}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
                 {/* Timeline card */}
                 <div
@@ -100,6 +90,7 @@ const Timeline = () => {
                   } ${
                     index % 2 === 0 ? "md:ml-0 ml-auto" : "md:mr-0 mr-auto"
                   } relative z-10`}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 >
                   <motion.div
                     className="bg-gray-300 rounded-xl shadow-xl border border-white"
@@ -147,7 +138,10 @@ const Timeline = () => {
                 </div>
 
                 {/* Timeline icon */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-primary flex items-center justify-center shadow-md">
+                <div
+                  className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-primary flex items-center justify-center shadow-md"
+                  data-aos="zoom-in"
+                >
                   {exp.type === "education" ? (
                     <GraduationCap className="w-7 h-7 text-primary" />
                   ) : (
