@@ -39,7 +39,7 @@ const App: React.FC = () => {
                             <Layout>
                                 <HeroSection />
                                 <InvitationCard />
-                                <Timeline />{" "}
+                                <Timeline />
                                 {/* Add Timeline here on the home page */}
                             </Layout>
                         </ReduxProvider>

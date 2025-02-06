@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
             >
                 <div className="relative z-10 text-center">
                     <h1
-                        className="text-5xl md:text-7xl font-bold mb-4"
+                        className="text-4xl md:text-7xl font-bold mb-4"
                         style={{ fontFamily: '"Sixtyfour Convergence", serif' }}
                     >
                         CHRYSALIS
