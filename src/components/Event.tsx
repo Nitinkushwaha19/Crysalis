@@ -35,7 +35,7 @@ export default function Event({ title, images, vertical }: EventProps) {
             } items-center justify-center bg-gray-950 overflow-hidden rounded-lg md:shadow-xl`}
         >
             <h1
-                className={`text-6xl font-bold text-white pb-10 mt-32 ${
+                className={`text-4xl font-bold text-white pb-10 mt-32 md:text-6xl ${
                     vertical ? "lg:mr-56" : ""
                 }`}
                 style={{ fontFamily: "Bodoni Moda" }}

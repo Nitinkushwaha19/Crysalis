@@ -74,7 +74,7 @@ const Timeline = () => {
 
   return (
     <section className="py-20" id="experience">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <motion.div
           initial="hidden"
           whileInView="visible"

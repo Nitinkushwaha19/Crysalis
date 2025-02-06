@@ -28,14 +28,21 @@ const Header: React.FC = () => {
                     </div>
 
                     {/* Mobile menu button */}
-                    {/* ... mobile menu button ... */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="text-white focus:outline-none"
+                        >
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
+                    </div>
 
                     {/* Desktop menu */}
                     <div className="hidden md:flex space-x-8">
                         <a
                             key="home"
                             href="/"
-                            className={`text-white transition-colors duration-300 ${location.pathname === '/' ? 'border-b-2 border-blue-500 font-bold' : ''}`} // Added border and bold when active
+                            className={`text-white transition-colors duration-300 ${location.pathname === '/' ? 'border-b-2 border-blue-500 font-bold' : ''}`}
                         >
                             Home
                         </a>
@@ -43,7 +50,7 @@ const Header: React.FC = () => {
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
-                                className={`text-white transition-colors duration-300 ${location.pathname === `/${item.toLowerCase()}` ? 'border-b-2 border-blue-500 font-bold' : ''}`} // Added border and bold when active
+                                className={`text-white transition-colors duration-300 ${location.pathname === `/${item.toLowerCase()}` ? 'border-b-2 border-blue-500 font-bold' : ''}`}
                             >
                                 {item}
                             </a>
@@ -59,7 +66,7 @@ const Header: React.FC = () => {
                         <a
                             key="home"
                             href="/"
-                            className={`block px-3 py-2 text-white transition-colors duration-300 ${location.pathname === '/' ? 'border-b-2 border-blue-500 font-bold' : ''}`} // Added border and bold when active
+                            className={`block px-3 py-2 text-white transition-colors duration-300 ${location.pathname === '/' ? 'border-b-2 border-blue-500 font-bold' : ''}`}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Home
@@ -68,7 +75,7 @@ const Header: React.FC = () => {
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
-                                className={`block px-3 py-2 text-white transition-colors duration-300 ${location.pathname === `/${item.toLowerCase()}` ? 'border-b-2 border-blue-500 font-bold' : ''}`} // Added border and bold when active
+                                className={`block px-3 py-2 text-white transition-colors duration-300 ${location.pathname === `/${item.toLowerCase()}` ? 'border-b-2 border-blue-500 font-bold' : ''}`}
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 {item}

@@ -9,7 +9,7 @@ export default function Event3D({
         <div className="relative h-[600px] flex w-4/5 mx-auto mb-32 flex-col items-center justify-center gap-4 overflow-hidden px-20 md:shadow-xl">
             <div className="flex flex-row gap-4 [perspective:300px]">
                 <Marquee
-                    className="h-full justify-center overflow-hidden [--duration:60s] [--gap:1rem]"
+                    className="h-full w-[200px] justify-center overflow-hidden [--duration:60s] [--gap:1rem] md:w-3/4"
                     vertical
                     style={{
                         transform:
@@ -21,7 +21,7 @@ export default function Event3D({
                             key={idx}
                             src={data.img}
                             alt={data.name}
-                            className="mx-auto h-full w-2/4 cursor-pointer rounded-xl border border-neutral-300 transition-all duration-300 hover:ring-1 hover:ring-neutral-300"
+                            className="mx-auto h-full w-3/4 cursor-pointer rounded-xl border border-neutral-300 transition-all duration-300  hover:ring-1 hover:ring-neutral-300"
                         />
                     ))}
                 </Marquee>
