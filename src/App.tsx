@@ -10,6 +10,7 @@ import EventsPage from "./pages/EventsPage";
 import InvitationCard from "./components/InvitationCard";
 import { ReduxProvider } from "./hooks/isPhone";
 import Members from "./pages/Members";
+import Winners from "./pages/Winners";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -52,6 +53,15 @@ const App: React.FC = () => {
           element={
             <Layout>
               <Timeline />
+            </Layout>
+          }
+        />
+        {/* Timeline route */}
+        <Route
+          path="/winners"
+          element={
+            <Layout>
+              <Winners />
             </Layout>
           }
         />

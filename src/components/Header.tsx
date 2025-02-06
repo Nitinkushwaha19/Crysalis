@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation } from 'react-router-dom';
+import { GrInstagram } from 'react-icons/gr'; // Import GrInstagram icon
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,22 +20,12 @@ const Header: React.FC = () => {
                             className="rounded-full bg-white p-1 transition-transform duration-300"
                             width="35"
                             height="35"
-                            alt=""
+                            alt="Logo"
                             src="/assets/logo@720x.png"
                         />
                         <div className="flex-shrink-0 text-white font-bold text-xl transition-transform duration-300">
                             CHRYSALIS
                         </div>
-                    </div>
-
-                    {/* Mobile menu button */}
-                    <div className="md:hidden">
-                        <button
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="text-white focus:outline-none"
-                        >
-                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                        </button>
                     </div>
 
                     {/* Desktop menu */}
@@ -46,7 +37,7 @@ const Header: React.FC = () => {
                         >
                             Home
                         </a>
-                        {["Events", "Members"].map((item) => (
+                        {["Events", "Members", "Winners"].map((item) => (
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
@@ -55,6 +46,26 @@ const Header: React.FC = () => {
                                 {item}
                             </a>
                         ))}
+
+                        {/* Instagram Logo with Hover Effect */}
+                        <a
+                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2" // Updated URL
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white hover:text-pink-500 transition-all duration-300 hover:scale-110 transform"
+                        >
+                            <GrInstagram size={30} />
+                        </a>
+                    </div>
+
+                    {/* Mobile menu button */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="text-white focus:outline-none"
+                        >
+                            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
                     </div>
                 </div>
             </div>
@@ -71,7 +82,7 @@ const Header: React.FC = () => {
                         >
                             Home
                         </a>
-                        {["Events", "Members"].map((item) => (
+                        {["Events", "Members", "Winners"].map((item) => (
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
@@ -81,6 +92,17 @@ const Header: React.FC = () => {
                                 {item}
                             </a>
                         ))}
+
+                        {/* Instagram Logo with Hover Effect */}
+                        <a
+                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2" // Updated URL
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-white hover:text-pink-500 transition-all duration-300 hover:scale-110 transform mt-4"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <GrInstagram size={30} />
+                        </a>
                     </div>
                 </div>
             )}
