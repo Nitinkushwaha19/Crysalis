@@ -10,6 +10,15 @@ const experiences = [
         location: "Ramdeobaba University",
         period: "3 Feb 25 - 7 Feb 25",
         description: ["Play hard, play fair, and have fun!"],
+        img: "/assets/event-timeline1.jpg",
+        type: "work",
+    },
+    {
+        title: "TechnoFest",
+        location: "MCA Block",
+        period: "7 Feb 25",
+        description: ["Play hard, play fair, and have fun!"],
+        img: "",
         type: "work",
     },
     {
@@ -17,6 +26,7 @@ const experiences = [
         location: "Ramdeobaba University",
         period: "2024-26",
         description: ["Our traditions are the stories of our ancestors."],
+        img: "/assets/event-timeline2.jpg",
         type: "work",
     },
     {
@@ -26,6 +36,7 @@ const experiences = [
         description: [
             "A nation's culture resides in the hearts and in the soul of its people.",
         ],
+        img: "/assets/event-timeline3.jpg",
         type: "work",
     },
 ];
@@ -118,9 +129,7 @@ const Timeline = () => {
                                         }}
                                     >
                                         <img
-                                            src={`/assets/event-timeline${
-                                                index + 1
-                                            }.jpg`}
+                                            src={exp.img}
                                             className="w-full h-72 object-cover rounded-t-xl"
                                         />
                                         <div className="p-5 h-1/3">
