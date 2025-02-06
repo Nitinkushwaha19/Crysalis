@@ -56,7 +56,7 @@ const Members = () => {
     <span className="bg-clip-text text-transparent text-white">
         OUR
     </span>
-    <span className="bg-clip-text text-transparent text-blue-500 ml-2">
+    <span className="bg-clip-text text-blue-500 ml-2">
         LEADS
     </span>
 </h2>

@@ -1,17 +1,16 @@
 import React from "react";
 import { WarpBackground } from "./ui/warp-background";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { BorderBeam } from "./ui/border-beam";
 
 const HeroSection: React.FC = () => {
+    const navigate = useNavigate(); // Initialize useNavigate
+
+    const handleExploreEvents = () => {
+        navigate('/events'); // Redirect to /events
+    };
+
     return (
-        // <div
-        //     className="relative min-h-screen flex items-center justify-center text-white px-4"
-        //     style={{
-        //         // backgroundImage: 'url("https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80")',
-        //         backgroundSize: "cover",
-        //         backgroundPosition: "center",
-        //     }}
-        // >
-        // {/* <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div> */}
         <>
             <WarpBackground
                 className="relative min-h-screen flex items-center justify-center text-white border-none"
@@ -26,18 +25,17 @@ const HeroSection: React.FC = () => {
                         CHRYSALIS
                     </h1>
                     <div className="flex flex-col md:flex-row gap-4 justify-center mt-10 -mb-10">
-                        <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition-colors">
+                        <button
+                            className="bg-transparent border bg-purple-600 hover:border-4 hover:font-bold text-white px-8 py-3 rounded-full transition-colors"
+                            onClick={handleExploreEvents} // Add onClick handler
+                            >
                             Explore Events
-                        </button>
-                        <button className="border border-white hover:bg-white/10 text-white px-8 py-3 rounded-full transition-colors">
-                            View Schedule
                         </button>
                     </div>
                 </div>
             </WarpBackground>
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black dark:from-background"></div>
         </>
-        // </div>
     );
 };
 

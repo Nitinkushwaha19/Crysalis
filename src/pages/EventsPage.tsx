@@ -3,7 +3,7 @@ import Event3D from "@/components/Event3D";
 
 const events = [
     {
-        title: "Inaugral",
+        title: "INAUGRAL",
         images: [
             "/assets/event1.jpeg",
             "/assets/event2.jpeg",
@@ -17,7 +17,7 @@ const events = [
         vertical: false,
     },
     {
-        title: "Sports",
+        title: "SPORTS",
         images: [
             "/assets/event1.jpeg",
             "/assets/event2.jpeg",
@@ -76,7 +76,7 @@ export default function EventsPage() {
                     className="ml-44 mr-10 text-6xl text-white"
                     style={{ fontFamily: "Bodoni Moda" }}
                 >
-                    Cultural
+                    CULTURAL
                 </h1>
             </div>
         </>
