@@ -64,7 +64,7 @@ export default function Event({ title, images, vertical }: EventProps) {
             <div
                 className={`pointer-events-none absolute ${
                     vertical
-                        ? "inset-x-0 top-0 h-1/3 bg-gradient-to-b"
+                        ? "md:inset-x-0 top-0 h-1/3 bg-gradient-to-b"
                         : "inset-y-0 left-0 w-1/4 bg-gradient-to-r"
                 } from-black via-gray-950 dark:from-background`}
             ></div>

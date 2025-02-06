@@ -1,13 +1,12 @@
 import React from "react";
 import { WarpBackground } from "./ui/warp-background";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const HeroSection: React.FC = () => {
     const navigate = useNavigate(); // Initialize useNavigate
 
     const handleExploreEvents = () => {
-        navigate('/events'); // Redirect to /events
+        navigate("/events"); // Redirect to /events
     };
 
     return (
@@ -24,11 +23,13 @@ const HeroSection: React.FC = () => {
                     >
                         CHRYSALIS
                     </h1>
-                    <div className=" md:flex-row gap-4 justify-center mt-10 -mb-10">
-                        <Button variant="outlined" className="border-white text-white hover:bg-white hover:text-black">
-                            Browse Events
-                        </Button>
-
+                    <div className="flex flex-col md:flex-row gap-4 justify-center mt-10 -mb-10">
+                        <button
+                            className="bg-transparent border bg-purple-600 hover:border-4 hover:font-bold text-white px-8 py-3 rounded-full transition-colors"
+                            onClick={handleExploreEvents} // Add onClick handler
+                        >
+                            Explore Events
+                        </button>
                     </div>
                 </div>
             </WarpBackground>
