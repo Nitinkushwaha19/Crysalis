@@ -15,6 +15,24 @@ const experiences = [
     type: "work",
   },
   {
+    title: "MCA",
+    location: "Ramdeobaba University",
+    period: "2024-26",
+    description: [
+      "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
+    ],
+    type: "work",
+  },
+  {
+    title: "MCA",
+    location: "Ramdeobaba University",
+    period: "2024-26",
+    description: [
+      "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
+    ],
+    type: "work",
+  },
+  {
     title: "Full-Stack Developer",
     location: "Meritest Solution Pvt. Ltd",
     period: "June 2023 - September 2023",
@@ -56,7 +74,7 @@ const Timeline = () => {
 
   return (
     <section className="py-20" id="experience">
-      <div className="container mx-auto px-4">
+      <div className="container px-4">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -139,7 +157,7 @@ const Timeline = () => {
 
                 {/* Timeline icon */}
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-primary flex items-center justify-center shadow-md"
+                  className="absolute -ml-7 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-white rounded-full border-4 border-primary flex items-center justify-center shadow-md"
                   data-aos="zoom-in"
                 >
                   {exp.type === "education" ? (
