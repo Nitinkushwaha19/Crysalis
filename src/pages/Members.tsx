@@ -32,9 +32,25 @@ const Members = () => {
         <div className="p-6 mt-[5rem] ">
             {/* "Our Leads" section with 2 cards per row */}
             <div className="mb-12 pb-8 flex flex-col">
-                <h2 className="text-3xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-pink-500 to-purple-500">
-                    Our Leads
-                </h2>
+            <h2 className="text-center mt-8 mb-12 font-custom leading-relaxed">
+    <span className="bg-clip-text text-transparent bg-gradient-to-r  from-blue-500 via-indigo-500 to-purple-500 font-extrabold text-6xl block">
+        OUR <span className="font-extrabold">CREATIVITY</span> {/* Combined and styled */}
+    </span><br />
+    <span className="text-white text-4xl block"> {/* Second line smaller and not bold */}
+        and attention to detail are
+    </span><br />
+    <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 font-extrabold text-6xl block">
+        TRULY INSPIRING. {/* Third line styled like first */}
+    </span>
+</h2>
+            <h2 className="text-5xl font-extrabold text-center mt-32 mb-12 font-custom"> {/* Added custom font class */}
+    <span className="bg-clip-text text-transparent text-white">
+        OUR
+    </span>
+    <span className="bg-clip-text text-transparent text-blue-500 ml-2">
+        LEADS
+    </span>
+</h2>
                 <div className="flex flex-wrap justify-center gap-4 pl-6 pr-6">
                     <ProfileCard
                         name={"Jane Smith"}
