@@ -78,7 +78,7 @@ const App: React.FC = () => {
                 />
                 {/* Events route */}
                 <Route
-                    path="/events"
+                    path="/gallery"
                     element={
                         <Layout>
                             <EventsPage />

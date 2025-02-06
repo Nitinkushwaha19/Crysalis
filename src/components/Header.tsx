@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                         >
                             Home
                         </a>
-                        {["Events", "Members", "Winners"].map((item) => (
+                        {["Gallery", "Members", "Winners"].map((item) => (
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                         >
                             Home
                         </a>
-                        {["Events", "Members", "Winners"].map((item) => (
+                        {["Gallery", "Members", "Winners"].map((item) => (
                             <a
                                 key={item}
                                 href={`/${item.toLowerCase()}`}
