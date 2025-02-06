@@ -9,9 +9,7 @@ const experiences = [
         title: "Sports Day",
         location: "Ramdeobaba University",
         period: "3 Feb 25 - 7 Feb 25",
-        description: [
-            "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
-        ],
+        description: ["Play hard, play fair, and have fun!"],
         type: "work",
     },
     {
@@ -19,7 +17,7 @@ const experiences = [
         location: "Ramdeobaba University",
         period: "2024-26",
         description: [
-            "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
+            "A nation's culture resides in the hearts and in the soul of its people.",
         ],
         type: "work",
     },
@@ -27,9 +25,7 @@ const experiences = [
         title: "MCA",
         location: "Ramdeobaba University",
         period: "2024-26",
-        description: [
-            "Pursuing Master's in Computer Applications with focus on advanced software development and system design. Engaging in comprehensive coursework covering modern development practices and emerging technologies.",
-        ],
+        description: ["Our traditions are the stories of our ancestors."],
         type: "work",
     },
     {

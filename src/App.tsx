@@ -13,18 +13,18 @@ import Members from "./pages/Members";
 import Winners from "./pages/Winners";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b bg-black flex flex-col">
-      {/* Header that is always visible */}
-      <Header />
+    return (
+        <div className="min-h-screen bg-black flex flex-col bg-[url(/assets/bg-4.jpg)]">
+            {/* Header that is always visible */}
+            <Header />
 
-      {/* Main Content that changes based on the route */}
-      <main>{children}</main>
+            {/* Main Content that changes based on the route */}
+            <main className="backdrop-blur-sm">{children}</main>
 
-      {/* Footer that is always visible */}
-      <Footer />
-    </div>
-  );
+            {/* Footer that is always visible */}
+            <Footer />
+        </div>
+    );
 };
 
 const App: React.FC = () => {
@@ -47,45 +47,45 @@ const App: React.FC = () => {
                     }
                 />
 
-        {/* Timeline route */}
-        <Route
-          path="/timeline"
-          element={
-            <Layout>
-              <Timeline />
-            </Layout>
-          }
-        />
-        {/* Timeline route */}
-        <Route
-          path="/winners"
-          element={
-            <Layout>
-              <Winners />
-            </Layout>
-          }
-        />
-        {/* Events route */}
-        <Route
-          path="/events"
-          element={
-            <Layout>
-              <EventsPage />
-            </Layout>
-          }
-        />
-        {/* Members route */}
-        <Route
-          path="/members"
-          element={
-            <Layout>
-              <Members />
-            </Layout>
-          }
-        />
-      </Routes>
-    </Router>
-  );
+                {/* Timeline route */}
+                <Route
+                    path="/timeline"
+                    element={
+                        <Layout>
+                            <Timeline />
+                        </Layout>
+                    }
+                />
+                {/* Timeline route */}
+                <Route
+                    path="/winners"
+                    element={
+                        <Layout>
+                            <Winners />
+                        </Layout>
+                    }
+                />
+                {/* Events route */}
+                <Route
+                    path="/events"
+                    element={
+                        <Layout>
+                            <EventsPage />
+                        </Layout>
+                    }
+                />
+                {/* Members route */}
+                <Route
+                    path="/members"
+                    element={
+                        <Layout>
+                            <Members />
+                        </Layout>
+                    }
+                />
+            </Routes>
+        </Router>
+    );
 };
 
 export default App;

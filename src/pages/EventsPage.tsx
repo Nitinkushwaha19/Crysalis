@@ -59,7 +59,7 @@ const events3d = [
 ];
 export default function EventsPage() {
     return (
-        <>
+        <div className="bg-black">
             {events.map((event) => (
                 <div className="min-h-screen" key={event.title}>
                     <Event
@@ -79,6 +79,6 @@ export default function EventsPage() {
                     CULTURAL
                 </h1>
             </div>
-        </>
+        </div>
     );
 }
