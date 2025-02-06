@@ -1,7 +1,7 @@
 import React from "react";
 import { WarpBackground } from "./ui/warp-background";
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
-import { BorderBeam } from "./ui/border-beam";
+import { Button } from "@mui/material";
 
 const HeroSection: React.FC = () => {
     const navigate = useNavigate(); // Initialize useNavigate
@@ -24,17 +24,17 @@ const HeroSection: React.FC = () => {
                     >
                         CHRYSALIS
                     </h1>
-                    <div className="flex flex-col md:flex-row gap-4 justify-center mt-10 -mb-10">
-                        <button
-                            className="bg-transparent border bg-purple-600 hover:border-4 hover:font-bold text-white px-8 py-3 rounded-full transition-colors"
-                            onClick={handleExploreEvents} // Add onClick handler
-                            >
-                            Explore Events
-                        </button>
+                    <div className=" md:flex-row gap-4 justify-center mt-10 -mb-10">
+                        <Button variant="outlined" className="border-white text-white hover:bg-white hover:text-black">
+                            Browse Events
+                        </Button>
+
                     </div>
                 </div>
             </WarpBackground>
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black dark:from-background"></div>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black dark:from-background">
+
+            </div>
         </>
     );
 };
