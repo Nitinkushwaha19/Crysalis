@@ -19,21 +19,23 @@ import Winners from "./pages/Winners";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
     const { pathname } = useLocation();
-    const isHome = pathname === "/";
+    const isHome = pathname == "/";
     return (
-        <div
-            className={`min-h-screen bg-black flex flex-col bg-[url(/assets/${
-                isHome ? "globe.png" : "bg-4.jpg"
-            })] bg-cover`}
-        >
+        <div className={`min-h-screen bg-black flex flex-col`}>
             {/* Header that is always visible */}
             <Header />
 
             {/* Main Content that changes based on the route */}
-            <main className="backdrop-blur-sm">{children}</main>
+            <main
+                className={`bg-[url(/assets/${
+                    isHome ? "globe.png" : "bg-2.jpg"
+                })] bg-cover`}
+            >
+                {children}
+                <Footer />
+            </main>
 
             {/* Footer that is always visible */}
-            <Footer />
         </div>
     );
 };
