@@ -18,14 +18,14 @@ const HeroSection: React.FC = () => {
             >
                 <div className="relative z-10 text-center">
                     <h1
-                        className="text-4xl md:text-7xl font-bold mb-4"
+                        className="text-3xl md:text-7xl font-bold mb-4"
                         style={{ fontFamily: '"Sixtyfour Convergence", serif' }}
                     >
                         CHRYSALIS
                     </h1>
                     <div className="flex flex-col md:flex-row gap-4 justify-center mt-10 -mb-10">
                         <button
-                            className="bg-transparent border bg-purple-600 hover:border-2 text-white px-8 py-3 rounded-full transition-colors"
+                            className="bg-transparent px-0 border bg-purple-600 hover:border-2 text-white py-3 rounded-full transition-colors md:px-8"
                             onClick={handleExploreEvents} // Add onClick handler
                         >
                             Explore Events
