@@ -29,7 +29,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
 const App: React.FC = () => {
     return (
-        <Router>
             <Routes>
                 <Route
                     path="/"
@@ -47,7 +46,6 @@ const App: React.FC = () => {
                 <Route path="/gallery" element={<Layout><EventsPage /></Layout>} />
                 <Route path="/members" element={<Layout><Members /></Layout>} />
             </Routes>
-        </Router>
     );
 };
 
