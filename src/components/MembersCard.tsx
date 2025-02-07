@@ -30,9 +30,10 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, designation, imageUrl }
           image={imageUrl || 'https://via.placeholder.com/230x256'} // Default image URL if no image is provided
           alt={name}
           style={{
-            objectFit: 'cover', // Ensure the image covers the entire area
+            objectFit: 'contain', // Ensure the image covers the entire area
             height: '80%', // 80% of the card height
             width: '100%',
+            backgroundColor: "#E1F0DA"
           }}
         />
 
@@ -40,7 +41,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ name, designation, imageUrl }
         <CardContent
           className="flex flex-col justify-center items-center p-3"
           style={{
-            backgroundColor: '#f9f9f9', // Light background for content area
+            backgroundColor: '#99BC85', // Light background for content area
             borderTop: '1px solid #ddd', // Slight divider between image and content
             height: '20%', // 20% of the card height
           }}
