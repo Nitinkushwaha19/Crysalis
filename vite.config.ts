@@ -12,7 +12,10 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
+    build: {
+        outDir: "dist",
+    },
     server: {
-        historyApiFallback: true // Ensure client-side routing works
+        historyApiFallback: true, // ✅ Ensures navigation works
     }
 });
