@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useLocation } from 'react-router-dom';
-import { GrInstagram } from 'react-icons/gr'; // Import GrInstagram icon
+import { GrInstagram } from 'react-icons/gr';
 
 const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
                     </div>
 
                     {/* Desktop menu */}
-                    <div className="hidden md:flex space-x-8">
+                    <div className="hidden md:flex space-x-8 items-center"> {/* Added items-center */}
                         <a
                             key="home"
                             href="/"
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 
                         {/* Instagram Logo with Hover Effect */}
                         <a
-                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2" // Updated URL
+                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-white hover:text-pink-500 transition-all duration-300 hover:scale-110 transform"
@@ -93,12 +93,12 @@ const Header: React.FC = () => {
                             </a>
                         ))}
 
-                        {/* Instagram Logo with Hover Effect */}
+                        {/* Instagram Logo */}
                         <a
-                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2" // Updated URL
+                            href="https://www.instagram.com/chrysalis_2k25?igsh=bjlwcWh4Y3l5aGR2"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block text-white hover:text-pink-500 transition-all duration-300 hover:scale-110 transform mt-4"
+                            className="block px-3 py-2 text-white hover:text-pink-500 transition-all duration-300 hover:scale-110 transform" // Added block, px-3, py-2
                             onClick={() => setIsMenuOpen(false)}
                         >
                             <GrInstagram size={30} />
@@ -110,4 +110,4 @@ const Header: React.FC = () => {
     );
 };
 
-export default Header;
+export default Header;  
