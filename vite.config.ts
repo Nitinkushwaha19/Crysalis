@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   server: {
-    historyApiFallback: true, // This ensures proper handling of routes on refresh
+    historyApiFallback: true, // Ensures proper handling of SPA routes in dev mode
   },
 });
