@@ -43,7 +43,6 @@ const App: React.FC = () => {
                         </ReduxProvider>
                     }
                 />
-                <Route path="/timeline" element={<Layout><Timeline /></Layout>} />
                 <Route path="/winners" element={<Layout><Winners /></Layout>} />
                 <Route path="/gallery" element={<Layout><EventsPage /></Layout>} />
                 <Route path="/members" element={<Layout><Members /></Layout>} />
