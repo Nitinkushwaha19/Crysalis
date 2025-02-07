@@ -5,14 +5,14 @@ import 'aos/dist/aos.css'; // Import AOS styles
 
 // Sample data for the team members
 const members = [
-    { name: 'John Doe', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Jane Smith', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Sam Wilson', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Chris Evans', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Mark Ruffalo', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Scarlett Johansson', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Robert Downey Jr.', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
-    { name: 'Tom Hiddleston', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
+    { name: 'Varad Upgade', designation: 'Secretary MCA', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862134/Varad_Upgade_Secretary_MCA_I_yr_qxpns8.png' },
+    { name: 'Shweta Prajapati', designation: 'Discipline Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862126/Shweta_Prajapati_Discipline_Head_ooat8c.png' },
+    { name: 'Aboli Faye', designation: 'Backdrop Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862103/Aboli_Faye_Backdrop_head_cj163x.png' },
+    { name: 'Naziya Kapadiya', designation: 'Co-Treasurer', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862122/Naziya_Kapadia_co_treasurer_ytqftq.png' },
+    { name: 'Riya Saxena', designation: 'Inaugral Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862146/Riya_Saxena_Inaugral_Head_osvaed.png' },
+    { name: 'Himanshu Bankar', designation: 'Techanical Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862171/techanical_head_wdxbey.png' },
+    { name: 'Omkar  Barhanpure', designation: 'Sports Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862150/sports_head_shpfrq.png' },
+    { name: 'Gunjan Maurya', designation: 'Sports Head', imageUrl: 'https://res.cloudinary.com/dcpugzrqm/image/upload/v1738866482/WhatsApp_Image_2025-02-06_at_23.53.00_e9093ad3_gevgxf.png' },
     { name: 'Tom Holland', designation: 'Committee Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
     { name: 'Chris Evans', designation: 'Our Lead', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
     { name: 'Mark Ruffalo', designation: 'Technical Member', imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80' },
@@ -62,23 +62,23 @@ const Members = () => {
 </h2>
                 <div className="flex flex-wrap justify-center gap-4 pl-6 pr-6">
                     <ProfileCard
-                        name={"Jane Smith"}
+                        name={"Pratik Amnerkar"}
                         designation={"President"}
-                        imageUrl={"https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"}
+                        imageUrl={"https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862124/Pratik_Amnerkar_President_fby7cv.png"}
                     />
                 </div>
             </div>
             <div className="flex justify-center items-center mb-20" data-aos="fade-up">
                 <div className="flex flex-wrap justify-evenly gap-28 pl-6 pr-6">
                     <ProfileCard
-                        name={"Jane Smith"}
-                        designation={"President"}
-                        imageUrl={"https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"}
+                        name={"Sankalp Singh"}
+                        designation={"Vice President MCA"}
+                        imageUrl={"https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862125/Sankalp_Singh_Vice_President_MCA_I_yr_g4rzq6.png"}
                     />
                     <ProfileCard
-                        name={"Jane Smith"}
-                        designation={"President"}
-                        imageUrl={"https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80"}
+                        name={"Priyanshi Jha"}
+                        designation={"Vice President BCA"}
+                        imageUrl={"https://res.cloudinary.com/dcpugzrqm/image/upload/v1738862143/vice_president_BCA_u84jfw.png"}
                     />
                 </div>
             </div>
