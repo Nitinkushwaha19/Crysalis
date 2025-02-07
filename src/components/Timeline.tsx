@@ -18,7 +18,7 @@ const experiences = [
         location: "MCA Block",
         period: "7 Feb 25",
         description: ["Play hard, play fair, and have fun!"],
-        img: "",
+        img: "/assets/technofest.jpg",
         type: "work",
     },
     {

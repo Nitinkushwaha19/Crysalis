@@ -17,20 +17,25 @@ import { ReduxProvider } from "./hooks/isPhone";
 import Members from "./pages/Members";
 import Winners from "./pages/Winners";
 
+const getBackground = (pathname: string) => {
+    return pathname === "/"
+        ? "bg-[url(/assets/globe.png)]"
+        : "bg-[url(/assets/bg-4.jpg)]";
+};
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
-    const { pathname } = useLocation();
-    const isHome = pathname == "/";
+    const location = useLocation();
     return (
-        <div className={`min-h-screen bg-black flex flex-col`}>
+        <div
+            className={`min-h-screen bg-black flex flex-col ${getBackground(
+                location.pathname
+            )} bg-cover`}
+        >
             {/* Header that is always visible */}
             <Header />
 
             {/* Main Content that changes based on the route */}
-            <main
-                className={`bg-[url(/assets/${
-                    isHome ? "globe.png" : "bg-2.jpg"
-                })] bg-cover`}
-            >
+            <main className="backdrop-blur">
                 {children}
                 <Footer />
             </main>

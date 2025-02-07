@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
     };
 
     return (
-        <>
+        <div className="relative min-h-screen">
             <WarpBackground
                 className="relative min-h-screen flex items-center justify-center text-white border-none bg-black"
                 gridColor="rgba(86, 86, 86, 0.8)"
@@ -32,9 +32,9 @@ const HeroSection: React.FC = () => {
                         </button>
                     </div>
                 </div>
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-black dark:from-background"></div>
             </WarpBackground>
-        </>
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-t from-black via-gray-950 dark:from-background"></div>
+        </div>
     );
 };
 
