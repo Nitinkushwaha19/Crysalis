@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     return (
         <footer
             className={`text-white py-12 backdrop-blur-sm ${
-                pathname === "/events" && "bg-black"
+                pathname === "/gallery" && "bg-black"
             }`}
         >
             <div className="border-t border-white/20 mt-8 pt-8 text-center">
